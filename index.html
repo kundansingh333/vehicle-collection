@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vehicle Collection - Home</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="fas fa-car"></i> Vehicle Collection
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="history.html">History</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Carousel Section -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="1"
+        ></button>
+        <button
+          type="button"
+          data-bs-target="#heroCarousel"
+          data-bs-slide-to="2"
+        ></button>
+      </div>
+
+      <div class="carousel-inner">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div
+            class="carousel-bg"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&quot;);
+            "
+          >
+            <div class="carousel-overlay"></div>
+          </div>
+          <div class="carousel-caption">
+            <h1 class="display-3">Welcome to Vehicle Collection</h1>
+            <p class="lead">Explore the fascinating world of transportation</p>
+            <a href="gallery.html" class="btn btn-primary btn-lg"
+              >Explore Now</a
+            >
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div
+            class="carousel-bg"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&quot;);
+            "
+          >
+            <div class="carousel-overlay"></div>
+          </div>
+          <div class="carousel-caption">
+            <h1 class="display-3">Classic & Modern Vehicles</h1>
+            <p class="lead">From vintage cars to electric vehicles</p>
+            <a href="gallery.html" class="btn btn-primary btn-lg"
+              >View Gallery</a
+            >
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div
+            class="carousel-bg"
+            style="
+              background-image: url(&quot;https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1200&quot;);
+            "
+          >
+            <div class="carousel-overlay"></div>
+          </div>
+          <div class="carousel-caption">
+            <h1 class="display-3">Detailed Information</h1>
+            <p class="lead">Learn history, specs, and interesting facts</p>
+            <a href="about.html" class="btn btn-primary btn-lg">Learn More</a>
+          </div>
+        </div>
+      </div>
+
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#heroCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- Welcome Section with Parallax -->
+    <section class="welcome-section parallax" id="welcome">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4">
+            <h2 class="mb-4">Discover the World of Vehicles</h2>
+            <p class="lead">
+              Welcome to our comprehensive vehicle collection showcase.
+            </p>
+            <p>
+              From classic cars to modern motorcycles, heavy-duty trucks to
+              luxury sedans - discover the evolution of transportation through
+              our carefully curated collection.
+            </p>
+            <a href="about.html" class="btn btn-outline-primary">Learn More</a>
+          </div>
+          <div class="col-lg-6">
+            <img
+              src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=600"
+              alt="Vehicle"
+              class="img-fluid rounded shadow"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Vehicles Section -->
+    <section class="featured-section py-5 bg-light">
+      <div class="container">
+        <h2 class="text-center mb-5">Featured Vehicles</h2>
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card vehicle-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=400"
+                class="card-img-top"
+                alt="Classic Car"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Classic Cars</h5>
+                <p class="card-text">
+                  Explore timeless beauty of classic automobiles from different
+                  eras.
+                </p>
+                <a href="details.html" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card vehicle-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400"
+                class="card-img-top"
+                alt="Motorcycle"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Motorcycles</h5>
+                <p class="card-text">
+                  Discover powerful two-wheelers and their evolution over time.
+                </p>
+                <a href="details.html" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card vehicle-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=400"
+                class="card-img-top"
+                alt="Truck"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Heavy Vehicles</h5>
+                <p class="card-text">
+                  Learn about trucks, buses, and commercial transport vehicles.
+                </p>
+                <a href="details.html" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card vehicle-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=400"
+                class="card-img-top"
+                alt="Electric Car"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Electric Vehicles</h5>
+                <p class="card-text">
+                  Modern electric cars leading the sustainable future.
+                </p>
+                <a href="details.html" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card vehicle-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=400"
+                class="card-img-top"
+                alt="SUV"
+              />
+              <div class="card-body">
+                <h5 class="card-title">SUVs</h5>
+                <p class="card-text">
+                  Versatile sport utility vehicles for all terrains.
+                </p>
+                <a href="details.html" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="col-md-6 col-lg-4">
+            <div class="card vehicle-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400"
+                class="card-img-top"
+                alt="Sports Car"
+              />
+              <div class="card-body">
+                <h5 class="card-title">Sports Cars</h5>
+                <p class="card-text">
+                  High-performance vehicles built for speed and style.
+                </p>
+                <a href="details.html" class="btn btn-primary">Learn More</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Section with Parallax Background -->
+    <section class="why-section parallax-bg py-5">
+      <div class="container">
+        <h2 class="text-center mb-5 text-white">Why Explore Our Collection?</h2>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="feature-box text-center">
+              <i class="fas fa-book fa-3x text-white mb-3"></i>
+              <h4 class="text-white">Rich History</h4>
+              <p class="text-white">
+                Learn about the fascinating history and evolution of each
+                vehicle type.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-box text-center">
+              <i class="fas fa-images fa-3x text-white mb-3"></i>
+              <h4 class="text-white">Quality Images</h4>
+              <p class="text-white">
+                Browse stunning photographs of vehicles from all angles.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="feature-box text-center">
+              <i class="fas fa-info-circle fa-3x text-white mb-3"></i>
+              <h4 class="text-white">Detailed Info</h4>
+              <p class="text-white">
+                Get comprehensive specifications and interesting facts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section py-5">
+      <div class="container">
+        <div class="row text-center g-4">
+          <div class="col-md-3">
+            <div class="stat-box">
+              <i class="fas fa-car fa-3x text-primary mb-3"></i>
+              <h2 class="counter" data-target="20">0</h2>
+              <p>Vehicles Featured</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-box">
+              <i class="fas fa-th-large fa-3x text-primary mb-3"></i>
+              <h2 class="counter" data-target="5">0</h2>
+              <p>Categories</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-box">
+              <i class="fas fa-images fa-3x text-primary mb-3"></i>
+              <h2 class="counter" data-target="100">0</h2>
+              <p>Images</p>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="stat-box">
+              <i class="fas fa-history fa-3x text-primary mb-3"></i>
+              <h2 class="counter" data-target="150">0</h2>
+              <p>Years of History</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Vehicle Collection</h5>
+            <p>Your ultimate resource for vehicle information and history.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-white text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="gallery.html" class="text-white text-decoration-none"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-white text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="bg-white" />
+        <div class="text-center">
+          <p class="mb-0">&copy; 2024 Vehicle Collection. College Project.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="btn btn-primary">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+  </body>
+</html>

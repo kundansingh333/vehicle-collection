@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery - Vehicle Collection</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <i class="fas fa-car"></i> Vehicle Collection
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="history.html">History</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+      <div class="container text-center">
+        <h1 class="display-4">Vehicle Gallery</h1>
+        <p class="lead">Browse our complete collection of transport vehicles</p>
+      </div>
+    </section>
+
+    <!-- Filter Buttons -->
+    <section class="py-4 bg-light">
+      <div class="container text-center">
+        <button
+          class="btn btn-primary filter-btn active"
+          onclick="filterGallery('all')"
+        >
+          All Vehicles
+        </button>
+        <button
+          class="btn btn-outline-primary filter-btn"
+          onclick="filterGallery('cars')"
+        >
+          Cars
+        </button>
+        <button
+          class="btn btn-outline-primary filter-btn"
+          onclick="filterGallery('bikes')"
+        >
+          Motorcycles
+        </button>
+        <button
+          class="btn btn-outline-primary filter-btn"
+          onclick="filterGallery('trucks')"
+        >
+          Trucks
+        </button>
+        <button
+          class="btn btn-outline-primary filter-btn"
+          onclick="filterGallery('electric')"
+        >
+          Electric
+        </button>
+      </div>
+    </section>
+
+    <!-- Gallery Grid -->
+    <section class="py-5">
+      <div class="container">
+        <div class="row g-4" id="galleryGrid">
+          <!-- Vehicle 1 -->
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="cars">
+            <div class="card vehicle-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?w=400"
+                alt="Ford Mustang"
+              />
+              <div class="card-body">
+                <span class="badge bg-primary mb-2">Classic Car</span>
+                <h5 class="card-title">Ford Mustang 1967</h5>
+                <p class="card-text">
+                  Iconic American muscle car from the golden era.
+                </p>
+                <a href="details_mustang.html" class="btn btn-sm btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Vehicle 2 -->
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="bikes">
+            <div class="card vehicle-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1558981852-426c6c22a060?w=400"
+                alt="Ducati"
+              />
+              <div class="card-body">
+                <span class="badge bg-danger mb-2">Motorcycle</span>
+                <h5 class="card-title">Ducati Panigale V4</h5>
+                <p class="card-text">
+                  Italian superbike with cutting-edge technology.
+                </p>
+                <a href="details_ducati.html" class="btn btn-sm btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Vehicle 3 -->
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="trucks">
+            <div class="card vehicle-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=400"
+                alt="Volvo Truck"
+              />
+              <div class="card-body">
+                <span class="badge bg-warning mb-2">Heavy Vehicle</span>
+                <h5 class="card-title">Volvo FH16</h5>
+                <p class="card-text">
+                  One of the world's most powerful trucks.
+                </p>
+                <a href="details_volvo.html" class="btn btn-sm btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Vehicle 4 -->
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="electric">
+            <div class="card vehicle-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=400"
+                alt="Tesla"
+              />
+              <div class="card-body">
+                <span class="badge bg-info mb-2">Electric</span>
+                <h5 class="card-title">Tesla Model S</h5>
+                <p class="card-text">Revolutionary electric luxury sedan.</p>
+                <a href="details_tesla.html" class="btn btn-sm btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Vehicle 5 -->
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="bikes">
+            <div class="card vehicle-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=400"
+                alt="Harley"
+              />
+              <div class="card-body">
+                <span class="badge bg-danger mb-2">Cruiser</span>
+                <h5 class="card-title">Harley-Davidson Sportster</h5>
+                <p class="card-text">Classic American cruiser motorcycle.</p>
+                <a href="details_davidson.html" class="btn btn-sm btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Vehicle 6 -->
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="cars">
+            <div class="card vehicle-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1549399542-7e3f8b79c341?w=400"
+                alt="Land Cruiser"
+              />
+              <div class="card-body">
+                <span class="badge bg-success mb-2">SUV</span>
+                <h5 class="card-title">Toyota Land Cruiser</h5>
+                <p class="card-text">
+                  Legendary off-road vehicle known for reliability.
+                </p>
+                <a href="details_toyota.html" class="btn btn-sm btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Vehicle 7 -->
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="cars">
+            <div class="card vehicle-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=400"
+                alt="Camaro"
+              />
+              <div class="card-body">
+                <span class="badge bg-primary mb-2">Sports Car</span>
+                <h5 class="card-title">Chevrolet Camaro</h5>
+                <p class="card-text">American muscle car and Mustang rival.</p>
+                <a href="details_camaro.html" class="btn btn-sm btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Vehicle 8 -->
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="cars">
+            <div class="card vehicle-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1617531653332-bd46c24f2068?w=400"
+                alt="BMW"
+              />
+              <div class="card-body">
+                <span class="badge bg-primary mb-2">Luxury Car</span>
+                <h5 class="card-title">Mercedes-Benz S-Class</h5>
+                <p class="card-text">Pinnacle of luxury and innovation.</p>
+                <a href="details_mercedes.html" class="btn btn-sm btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Vehicle 9 -->
+          <div class="col-md-6 col-lg-4 gallery-item" data-category="trucks">
+            <div class="card vehicle-card h-100">
+              <img
+                src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=400"
+                alt="Ford F150"
+              />
+              <div class="card-body">
+                <span class="badge bg-warning mb-2">Pickup</span>
+                <h5 class="card-title">Ford F-150</h5>
+                <p class="card-text">
+                  America's best-selling truck for decades.
+                </p>
+                <a href="details_ford.html" class="btn btn-sm btn-primary"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <h5>Vehicle Collection</h5>
+            <p>Your ultimate resource for vehicle information and history.</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <h5>Quick Links</h5>
+            <ul class="list-unstyled">
+              <li>
+                <a href="index.html" class="text-white text-decoration-none"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a href="gallery.html" class="text-white text-decoration-none"
+                  >Gallery</a
+                >
+              </li>
+              <li>
+                <a href="contact.html" class="text-white text-decoration-none"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <hr class="bg-white" />
+        <div class="text-center">
+          <p class="mb-0">&copy; 2024 Vehicle Collection. College Project.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="btn btn-primary">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Simple Filter Script -->
+    <script>
+      function filterGallery(category) {
+        // Get all items
+        var items = document.querySelectorAll(".gallery-item");
+        var buttons = document.querySelectorAll(".filter-btn");
+
+        // Remove active class from all buttons
+        buttons.forEach(function (btn) {
+          btn.classList.remove("active");
+          btn.classList.remove("btn-primary");
+          btn.classList.add("btn-outline-primary");
+        });
+
+        // Add active class to clicked button
+        event.target.classList.add("active");
+        event.target.classList.add("btn-primary");
+        event.target.classList.remove("btn-outline-primary");
+
+        // Filter items
+        items.forEach(function (item) {
+          if (category === "all") {
+            item.style.display = "block";
+          } else {
+            if (item.getAttribute("data-category") === category) {
+              item.style.display = "block";
+            } else {
+              item.style.display = "none";
+            }
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
